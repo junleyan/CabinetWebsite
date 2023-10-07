@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'NewYork';
+  src: url('fonts/newyork.otf') format('opentype');
+}
+
+.App {
+  text-align: center;
+}
+
+.App-container {
+  font-family: 'NewYork', Arial, sans-serif;
+  background-image: linear-gradient(to left top, #f9c116, #fdce5c, #feda8e, #fde7be, #f8f4ed);
+  min-height: 100vh;
+  background-size: 200% 200%; /* Make the gradient larger than the container */
+  animation: gradient-fill 20s linear infinite; /* Adjust the duration as needed */
+}
+
+@keyframes gradient-fill {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: xx-large;
+}
+
+.top-nav-left {
+  margin-left: 4vw;
+  margin-top: 3vw;
+}
+
+.top-nav-right {
+  margin-top: 3vw;
+  display: flex;
+}
+
+.top-nav-right div {
+  margin-right: 4vw;
+}
