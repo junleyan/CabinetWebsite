@@ -12,7 +12,7 @@
   background-image: linear-gradient(to left top, #f9c116, #fdce5c, #feda8e, #fde7be, #f8f4ed);
   min-height: 100vh;
   background-size: 200% 200%; /* Make the gradient larger than the container */
-  animation: gradient-fill 20s linear infinite; /* Adjust the duration as needed */
+  animation: gradient-fill 10s linear infinite; /* Adjust the duration as needed */
 }
 
 @keyframes gradient-fill {
@@ -20,13 +20,13 @@
     background-position: 0% 0%;
   }
   25% {
-    background-position: 100% 0%;
+    background-position: 50% 0%;
   }
   50% {
-    background-position: 100% 100%;
+    background-position: 50% 5%;
   }
   75% {
-    background-position: 0% 100%;
+    background-position: 0% 5%;
   }
   100% {
     background-position: 0% 0%;
@@ -53,4 +53,9 @@
 
 .top-nav-right div {
   margin-right: 4vw;
+}
+
+.content-container {
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
 }

@@ -1,14 +1,18 @@
 .Contact-container {
-    margin: 8vh auto;
-    font-size: 500%;
-    white-space: nowrap; 
-    overflow: hidden; 
-    border-right: 2px solid black; 
-    justify-content: center;
-    align-items: center;
-    animation: typing 2s steps(30, end);
-    position: relative;
+  margin: 8vh auto;
 }
+
+.Contact-title {
+  margin: auto;
+  font-size: 500%;
+  white-space: nowrap; 
+  overflow: hidden; 
+  border-right: 2px solid black; 
+  border-right-color: transparent;
+  animation: typing 2s steps(30, end);
+  position: relative;
+}
+
 
 @keyframes typing {
     from {
@@ -16,7 +20,122 @@
       opacity: 0;
     }
     to {
-      width: 75%;
+      width: 100%;
       opacity: 1;
     }
+}
+
+.Contact-form-container {
+  margin-top: 5vh;
+  display: grid;
+  place-items: center;
+}
+
+/* form starting stylings ------------------------------- */
+
+@font-face {
+  font-family: 'NewYork';
+  src: url('../fonts/newyork.otf') format('opentype');
+}
+
+.group 			  { 
+  position:relative; 
+  margin-bottom:35px; 
+}
+
+input 				{
+  font-size:18px;
+  font-family: 'NewYork', Arial, sans-serif;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:300px;
+  border:none;
+  background: transparent;
+  border-bottom:1px solid black;
+}
+input:focus 		{ outline:none; }
+
+/* LABEL ======================================= */
+label 				 {
+  color:#999; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+  top:-25px;
+  font-size:18px;
+  color:black;
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:black; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:black; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:black; }
+  to 	{ width:0; background:transparent; }
+}
+
+
+.btn-hover.color-4 {
+  background-image: linear-gradient(to right, #fc6076, #ff9a44, #ef9d43, #e75516);
+  box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
+}
+
+
+
+.btn-hover {
+  font-family: 'NewYork', Arial, sans-serif;
+  width: 200px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+
+  border-radius: 50px;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+  background-position: 100% 0;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+  outline: none;
 }
