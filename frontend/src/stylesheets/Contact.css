@@ -4,7 +4,7 @@
 
 .Contact-title {
   margin: auto;
-  font-size: 500%;
+  font-size: 300%;
   white-space: nowrap; 
   overflow: hidden; 
   border-right: 2px solid black; 
@@ -71,8 +71,8 @@ label 				 {
 
 /* active state */
 input:focus ~ label, input:valid ~ label 		{
-  top:-25px;
-  font-size:18px;
+  top:-15px;
+  font-size:15px;
   color:black;
 }
 
